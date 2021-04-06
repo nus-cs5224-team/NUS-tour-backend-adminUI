@@ -17,6 +17,7 @@ module.exports = [
     type: 'get',
     response: config => {
       const items = data.items
+      console.log(data)
       return {
         code: 20000,
         data: {

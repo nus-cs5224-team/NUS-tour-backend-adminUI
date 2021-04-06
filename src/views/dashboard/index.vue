@@ -1,6 +1,8 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+    <!-- <div class="dashboard-text">name: {{ name }}</div> -->
+    <i>Welcome NUS</i>
+    <div class="dashboard-text"><p>Backend Admin UI</p></div>
   </div>
 </template>
 
