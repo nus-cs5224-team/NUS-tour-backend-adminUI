@@ -15,29 +15,27 @@
       </el-table-column>
       <el-table-column width="110" label="Title">
         <template slot-scope="scope">
-          {{ scope.row.abstracts }}
+          {{ scope.row.name }}
         </template>
       </el-table-column>
       <el-table-column label="Details" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.details }}</span>
+          <span>{{ scope.row.location }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="Building" width="110" align="center">
+      <el-table-column width="110" label="Title">
         <template slot-scope="scope">
-          {{ scope.row.building.name }}
+          {{ scope.row.area }}
         </template>
       </el-table-column>
-      <el-table-column align="center" label="Starttime" width="200">
+      <el-table-column width="110" label="Title">
         <template slot-scope="scope">
-          <i class="el-icon-time" />
-          <span>{{ scope.row.starttime }}</span>
+          {{ scope.row.tel }}
         </template>
       </el-table-column>
-      <el-table-column align="center" label="Endtime" width="200">
+      <el-table-column width="110" label="Title">
         <template slot-scope="scope">
-          <i class="el-icon-time" />
-          <span>{{ scope.row.endtime }}</span>
+          {{ scope.row.fax }}
         </template>
       </el-table-column>
     </el-table>
@@ -45,8 +43,7 @@
 </template>
 
 <script>
-import { getList } from '@/api/table'
-import { getPromotions } from '@/api/promotions'
+import { getList } from '@/api/buildings'
 
 export default {
   filters: {
@@ -71,7 +68,7 @@ export default {
   methods: {
     fetchData() {
       this.listLoading = true
-      getPromotions().then(response => {
+      getList().then(response => {
         this.list = response.data
         this.listLoading = false
       })

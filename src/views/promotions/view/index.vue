@@ -45,8 +45,7 @@
 </template>
 
 <script>
-import { getList } from '@/api/table'
-import { getPromotions } from '@/api/promotions'
+import { getList } from '@/api/promotions'
 
 export default {
   filters: {
@@ -71,7 +70,7 @@ export default {
   methods: {
     fetchData() {
       this.listLoading = true
-      getPromotions().then(response => {
+      getList().then(response => {
         this.list = response.data
         this.listLoading = false
       })

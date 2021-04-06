@@ -10,7 +10,9 @@ const mocks = [
   ...user,
   ...table,
   ...promotion,
-  ...users
+  ...users,
+  ...require('./buildings'),
+  ...require('./bus'),
 ]
 
 // for front mock
